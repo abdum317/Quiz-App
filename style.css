@@ -72,8 +72,11 @@ form{
 }
 .button>a{
     font-size: 2rem;
+    font-weight: bolder;
     text-decoration: none;
-    color: #10266b;
+    color: black;
     padding: 4rem;
 }
-
+.button>a:hover{
+    color: #10266b;
+}
