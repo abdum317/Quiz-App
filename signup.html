@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@400;700;900&family=Rubik+Glitch&family=Rubik+Wet+Paint&display=swap"
+        rel="stylesheet">
+    <title>Welcome to Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            background-color: rgb(255, 58, 58);
+            color: #ffff;
+            font-size: 2rem;
+            text-align: center;
+            width: 25%;
+        }
+        .h2{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 15rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <img src="images/logog.png" alt="logo-image" id="logo">
+            <h1>V 0.1 BETA</h1>
+        </div>
+        <div class="sign-in">
+            <div class="h2">
+                <h2 id="h2"></h2>
+            </div>
+            <form action="app.js">
+                <label> First Name <br>
+                    <input id="firstname" type="text" name="first-name" placeholder="Enter your first name" required >
+                </label> <br>
+                <label>Last Name <br>
+                    <input id="lastname" type="text" name="last-name" placeholder="Enter your last name">
+                </label>
+                <label> Email-Address <br>
+                    <input id="email" type="email" name="email" placeholder="Enter your email" >
+                </label> <br>
+                <label>Password <br>
+                    <input id="password" type="password" name="password" placeholder="Enter Password">
+                </label>
+            </form>
+            <div class="button">
+                <button onclick="local()" id="login">SIGN UP</button> 
+                <a href="index.html">Already have an account login!!</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var heading02 = document.querySelector("#h2");
+        var firstName = document.querySelector("#firstname");
+        var lastName = document.querySelector("#lastname")
+        var emaill = document.querySelector("#email");
+        var password = document.querySelector("#password");
+        function local(){
+           var mail01 = localStorage.setItem("email" , emaill.value);
+           var pass01 =  localStorage.setItem("password" , password.value);
+
+           if(firstName.value === "" && lastName.value === "" && emaill.value === "" && password.value === ""){
+            heading02.style.padding = "1rem";
+            heading02.innerHTML ="PLEASE FILL THE FORM CORRECTLY" ;
+            setTimeout(function clearr(){
+                heading02.style.padding = "0rem";
+                heading02.innerHTML = "";
+            },2000)
+           }
+           else{
+            location.href = 'http://127.0.0.1:5500/index.html'
+           }
+
+        }
+    </script>
+</body>
+
+</html>
