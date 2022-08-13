@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quiz</title>
+    <title>Html Quiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@400;700;900&family=Rubik+Glitch&family=Rubik+Wet+Paint&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="htmlq.css">
 </head>
 
 <body>
@@ -20,23 +20,22 @@
             <img src="images/logog.png" alt="logo-image" id="logo">
             <h1 id="head"></h1>
         </div>
-        <div class="quiz-selection">
-            <div class="html">
-                <h1><a href="htmlq.html">HTML Quiz</a></h1>
-            </div>
-            <div class="css">
-                <h1><a href="cssq.html">CSS Quiz</a></h1>
-            </div>
-            <div class="js">
-                <h1><a href="jsq.html">Java Script Quiz</a></h1>
-            </div>
+        <div class="questions">
+            <form>
+                <p>01 : What is the full form of html and css and javascript?</p><br><br>
+                <input type="radio" name="html01" value="hyper text markeup">
+                <label>hyper text markeup</label><br><br>
+                <input type="radio" name="html01" value="hyper text my language">
+                <label>hyper text my language</label><br><br>
+                <input type="radio" name="html01" value="yes language">
+                <label>yes language</label><br><br>
+                <div class="button">
+                    <button>Next</button>
+                </div>
+            </form>
         </div>
     </div>
-
-    <script>
-        var h1 = document.querySelector("#head");
-        h1.innerHTML ="Hello " + localStorage.getItem("FirstName");
-    </script>
+    <script src="htmlq.js"></script>
 </body>
 
 </html>

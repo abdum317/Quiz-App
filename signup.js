@@ -6,6 +6,7 @@ var password = document.querySelector("#password");
 function local(){
    var mail01 = localStorage.setItem("email" , emaill.value);
    var pass01 =  localStorage.setItem("password" , password.value);
+   var firstN = localStorage.setItem("FirstName" , firstName.value);
 
    if(firstName.value === "" && lastName.value === "" && emaill.value === "" && password.value === ""){
     heading02.style.padding = "1rem";
