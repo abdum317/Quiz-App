@@ -36,22 +36,22 @@ html{
     justify-content:center ;
     margin-top: 6%;
 }
-form{
+.masla{
     font-size: 5rem;
     background-color: #ffff;
     width: 80%;
     padding: 5rem;
     text-align: start;
 }
-form>label{
+.masla>label{
     padding-bottom: 5rem;
     background-color: #ffff;
 }
-form>input{
+.masla>input{
     width: 5rem;
     height: 2em;
 }
-form>p{
+.masla>p{
     background-color: #ffff;
 }
 button{

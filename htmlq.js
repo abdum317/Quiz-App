@@ -1,83 +1,68 @@
 var h1 = document.querySelector("#head");
 h1.innerHTML = "Hello " + localStorage.getItem("FirstName");
 
+
+
 var question = document.querySelector("#question");
 var option01 = document.querySelector("#option-01");
 var option02 = document.querySelector("#option-02");
 var option03 = document.querySelector("#option-03");
-var radioButton = document.querySelectorAll("#input");
+var submit = document.querySelector("button");
+var answers = document.querySelectorAll(".input");
+
 
 var quesArr = [];
-quesArr.push(new Questions("What does HTML stand for?" , "Hyper Test Markup Language" , "Hyperlinks and Text Markup Language" , "Home Tool Markup Langauge"));
-quesArr.push(new Questions("Choose the correct HTML element for the largest heading:" , "'<heading>'" , "<h1>" , "<h6>"));
-quesArr.push(new Questions("What is the correct HTML element for inserting a line break?" , "<br>" , "<lb>" , "<break>"));
-quesArr.push(new Questions("What is the correct HTML for adding a background color?" , "<body style = 'background-color:yellow';>" , "<body bg = 'yellow>" , "<background>yellow</background>"));
-quesArr.push(new Questions("Who is the father of HTML?" , "Rasmus Lerdorf" , "< Tim Berners-Lee" , " Brendan Eich"));
-console.log(quesArr);
+
+quesArr.push(new Questions("What does HTML stand for?", "Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Langauge", "answer-01"));
+quesArr.push(new Questions("Choose the correct HTML element for the largest heading:", "< heading >", "< h1 >", "< h6 >", "answer-02"));
+quesArr.push(new Questions("What is the correct HTML element for inserting a line break?", "< br >", "< lb >", "< break >", "answer-01"));
+quesArr.push(new Questions("What is the correct HTML for adding a background color?", "< body style = 'background-color:yellow'; >", "< body bg = 'yellow >", "< background >yellow</ background >", "answer-01"));
+quesArr.push(new Questions("Who is the father of HTML?", "Rasmus Lerdorf", "Tim Berners-Lee", " Brendan Eich", "answer-02"));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function checkRadio() {
-
-    // for(var i = 0; i<radioButton.length; i++){
-    //     if(radioButton[i].checked){
-    //         document.write(radioButton[i].value);
-    //     }
-    // }
-
-    for(var i = 0; i<quesArr.length; i++){
-    }
-}
-
-
-
-
-
-// var bb = {
-//     question : "What does HTML stand for?",
-//     o01:"hyper text markeup langaue",
-//     o02:"hyper text markeup ",
-//     o03:"hyper text markeup landfade"
-// }
-
-question.innerHTML = quesArr[0].question;
-option01.innerHTML = quesArr[0].option1;
-option02.innerHTML = quesArr[0].option2;
-option03.innerHTML = quesArr[0].option3;
-
-
-
-function Questions(question , opt01 , opt02 , opt03){
+function Questions(question, opt01, opt02, opt03, answer) {
     this.question = question;
     this.option1 = opt01;
     this.option2 = opt02;
     this.option3 = opt03;
+    this.ans = answer;
 }
+var totalQuestion = 0;
+var score = 0;
+var loadQuestion = function (){
+    question.innerHTML = quesArr[totalQuestion].question;
+    option01.innerHTML = quesArr[totalQuestion].option1;
+    option02.innerHTML = quesArr[totalQuestion].option2;
+    option03.innerHTML = quesArr[totalQuestion].option3;
+
+}
+loadQuestion();
+
+var getCheckedAnswer = function(){
+    var answer;
+    answers.forEach(function (curAnsElem) {
+        if(curAnsElem.checked){
+            answer = curAnsElem.id;
+        }
+
+    })
+    return answer;
+
+};
+
+submit.addEventListener('click' , function(){
+    var checkedAnswer = getCheckedAnswer();
+    console.log(checkedAnswer);
+
+    if(checkedAnswer === quesArr[totalQuestion].ans){
+        score++ ;
+    };
+    totalQuestion++ ;
+    if(totalQuestion < quesArr.length){
+        loadQuestion();
+    }else{
+        console.log(score + "/" + totalQuestion);
+        window.location = "result.html";
+    }
+});
+
