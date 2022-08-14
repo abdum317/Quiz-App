@@ -13,16 +13,16 @@ var answers = document.querySelectorAll(".input");
 
 var quesArr = [];
 
-quesArr.push(new Questions("01: What does HTML stand for?", "Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Langauge", "answer-01"));
-quesArr.push(new Questions("02: Choose the correct HTML element for the largest heading:", "< heading >", "< h1 >", "< h6 >", "answer-02"));
-quesArr.push(new Questions("03: What is the correct HTML element for inserting a line break?", "< br >", "< lb >", "< break >", "answer-01"));
-quesArr.push(new Questions("04: What is the correct HTML for adding a background color?", "< body style = 'background-color:yellow'; >", "< body bg = 'yellow >", "< background >yellow</ background >", "answer-01"));
-quesArr.push(new Questions("05: Who is the father of HTML?", "Rasmus Lerdorf", "Tim Berners-Lee", " Brendan Eich", "answer-02"));
-quesArr.push(new Questions("06: What do you understand by HTML?" , " HTML describes the structure of a webpage" ," HTML is the standard markup language mainly used to create web pages", "All of the above" , "answer-03"));
-quesArr.push(new Questions("07: Which is used to read an HTML page and render it?" , "Web network" , "Web matrix" , "Web browser" , "answer-03"));
-quesArr.push(new Questions("08: Which is used to create Web Pages ?" , "Java" , "HTML" , "JVM" , "answer-02"));
-quesArr.push(new Questions("09: HTML is a set of markup ___." , "tags" , "sets" , "attributes" , "answer-01"));
-quesArr.push(new Questions("10: HTML program is saved using ___ extension." , ".htmn" , ".html" , ".htnl" , "answer-02"));
+quesArr.push(new Questions("01: CSS stands for ______", "Cascade Sheets Style", "Cascade Style Sheet", "Cascading Style Sheets", "answer-03"));
+quesArr.push(new Questions("02: What is CSS?", "CSS is a style sheet language", "CSS is the language used to style the HTML documents", "All of the above", "answer-03"));
+quesArr.push(new Questions("03: Which tag is used to embed CSS in HTML document?", "< CSS >", "< script >", "< style >", "answer-03"));
+quesArr.push(new Questions("04: The < link > tag goes inside", "the body section", "the head section", "None of the above", "answer-02"));
+quesArr.push(new Questions("05: What CSS define in HTML ?", "How to send HTML elements", "How to save HTML elements", " How to display HTML elements", "answer-03"));
+quesArr.push(new Questions("06: Which HTML attribute is used to define inline styles ?" , "style" ," styles", "class" , "answer-02"));
+quesArr.push(new Questions("07:  CSS is also created and maintained by group of people within" , "W3D" , "W3B" , "W3C" , "answer-03"));
+quesArr.push(new Questions("08: CSS1 Developed in _____ by the W3C, describes CSS language and simple visual formatting for all HTML tags." , "1996" , "1994" , "1992" , "answer-01"));
+quesArr.push(new Questions("09: From which version of CSS under development since the late 1990s, added a lot of extra features ?" , "CSS1" , "CSS2" , "CSS3" , "answer-03"));
+quesArr.push(new Questions("10: How many types of levels in style sheets ?" , "two level" , "one level" , "three level" , "answer-03"));
 
 
 function Questions(question, opt01, opt02, opt03, answer) {

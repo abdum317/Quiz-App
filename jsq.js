@@ -13,16 +13,16 @@ var answers = document.querySelectorAll(".input");
 
 var quesArr = [];
 
-quesArr.push(new Questions("01: What does HTML stand for?", "Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Langauge", "answer-01"));
-quesArr.push(new Questions("02: Choose the correct HTML element for the largest heading:", "< heading >", "< h1 >", "< h6 >", "answer-02"));
-quesArr.push(new Questions("03: What is the correct HTML element for inserting a line break?", "< br >", "< lb >", "< break >", "answer-01"));
-quesArr.push(new Questions("04: What is the correct HTML for adding a background color?", "< body style = 'background-color:yellow'; >", "< body bg = 'yellow >", "< background >yellow</ background >", "answer-01"));
-quesArr.push(new Questions("05: Who is the father of HTML?", "Rasmus Lerdorf", "Tim Berners-Lee", " Brendan Eich", "answer-02"));
-quesArr.push(new Questions("06: What do you understand by HTML?" , " HTML describes the structure of a webpage" ," HTML is the standard markup language mainly used to create web pages", "All of the above" , "answer-03"));
-quesArr.push(new Questions("07: Which is used to read an HTML page and render it?" , "Web network" , "Web matrix" , "Web browser" , "answer-03"));
-quesArr.push(new Questions("08: Which is used to create Web Pages ?" , "Java" , "HTML" , "JVM" , "answer-02"));
-quesArr.push(new Questions("09: HTML is a set of markup ___." , "tags" , "sets" , "attributes" , "answer-01"));
-quesArr.push(new Questions("10: HTML program is saved using ___ extension." , ".htmn" , ".html" , ".htnl" , "answer-02"));
+quesArr.push(new Questions("01: Javascript is a _____ language.", "Programming", "Application", "Scripting", "answer-03"));
+quesArr.push(new Questions("02: JavaScript is a _____ Side Scripting Language.", "server", "browser", "ISP", "answer-02"));
+quesArr.push(new Questions("03: Which of the following purpose, JavaScript is designed for ?", "To Style HTML Pages", "To Perform Server Side Scripting Opertion", "To add interactivity to HTML Pages.", "answer-03"));
+quesArr.push(new Questions("04: JavaScript can be written", "directly on the server script", "directly into HTML page", "All the above", "answer-02"));
+quesArr.push(new Questions("05: JavaScript code is written inside file having extension", ".jvs", ".js", ".jsc", "answer-02"));
+quesArr.push(new Questions("06: Why JavaScript is called as Lightweight Programming Language ?" , "because JS is available free of cost." ," because we can add programming functionality inside JS", " because JS can provide programming functionality inside but up to certain extend." , "answer-03"));
+quesArr.push(new Questions("07: JavaScript is also called as" , "Server Side Scripting Language" , "Client Side Scripting Language" , "All of the above" , "answer-02"));
+quesArr.push(new Questions("08: Local Browser used for validations on the Web Pages uses" , "Java" , "JS" , "CSS" , "answer-02"));
+quesArr.push(new Questions("09:JavaScript code can be called by using" , "RMI" , "Function / Method" , "None of the above" , "answer-02"));
+quesArr.push(new Questions("10:Which of the following is not javascript data types?" , "Null type" , "undefined type" , "All the above" , "answer-03"));
 
 
 function Questions(question, opt01, opt02, opt03, answer) {

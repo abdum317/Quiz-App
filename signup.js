@@ -8,7 +8,15 @@ function local(){
    var pass01 =  localStorage.setItem("password" , password.value);
    var firstN = localStorage.setItem("FirstName" , firstName.value);
 
-   if(firstName.value === "" && lastName.value === "" && emaill.value === "" && password.value === ""){
+   if(firstName.value === "" || lastName.value === ""){
+    heading02.style.padding = "1rem";
+    heading02.innerHTML ="PLEASE FILL THE FORM CORRECTLY" ;
+    setTimeout(function clearr(){
+        heading02.style.padding = "0rem";
+        heading02.innerHTML = "";
+    },2000)
+   }
+   else if(emaill.value === "" || password.value === ""){
     heading02.style.padding = "1rem";
     heading02.innerHTML ="PLEASE FILL THE FORM CORRECTLY" ;
     setTimeout(function clearr(){
