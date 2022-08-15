@@ -69,3 +69,63 @@ button:hover{
     display: flex;
     justify-content: start;
 }
+@media(max-width:1252px){
+    html{
+        font-size: 60%;
+    }
+    .nav-bar>h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width:1205px){
+    html{
+        font-size: 55%;
+    }
+    .nav-bar>h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width:877px){
+    html{
+        font-size: 40%;
+    }
+    .nav-bar>h1{
+        font-size: 3rem;
+    }
+    .questions{
+        margin-top: 20%;
+    }
+}
+@media(max-width:655px){
+    html{
+        font-size: 32%;
+    }
+    .nav-bar>h1{
+        font-size: 4rem;
+    }
+    .questions{
+        margin-top: 30%;
+    }
+}
+@media(max-width:521px){
+    html{
+        font-size: 25%;
+    }
+    .nav-bar>h1{
+        font-size: 4rem;
+    }
+    .questions{
+        margin-top: 40%;
+    }
+}
+@media(max-width:301px){
+    html{
+        font-size: 20%;
+    }
+    .nav-bar>h1{
+        font-size: 4rem;
+    }
+    .questions{
+        margin-top: 60%;
+    }
+}

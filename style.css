@@ -80,3 +80,24 @@ form{
 .button>a:hover{
     color: #10266b;
 }
+@media(max-width:983px){
+    html{
+        font-size: 50%;
+    }
+}
+@media(max-width:445px){
+    html{
+        font-size: 40%;
+    }
+    .nav-bar>a{
+        font-size: 3rem;
+    }
+}
+@media(max-width:227px){
+    html{
+        font-size: 35%;
+    }
+    .nav-bar>a{
+        font-size: 2rem;
+    }
+}

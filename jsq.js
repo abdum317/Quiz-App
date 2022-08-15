@@ -55,6 +55,10 @@ var getCheckedAnswer = function () {
 
 };
 
+var deselectAll = function(){
+    answers.forEach((curAnsElem) => curAnsElem.checked = false);
+}
+
 submit.addEventListener('click', function () {
     var checkedAnswer = getCheckedAnswer();
     console.log(checkedAnswer);
@@ -63,6 +67,7 @@ submit.addEventListener('click', function () {
         score++;
     };
     totalQuestion++;
+    deselectAll();
     if (totalQuestion < quesArr.length) {
         loadQuestion();
     } else {
